@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script> 
+        $(function () {
+            //understanding DOM traversal
+            //this time using jQuery traversal API
+            //search for products, then search for li, then change the color
+            //-->$("#products").find("li").css("color","red");//both children and grandchildren of products will get impacted
+            
+            //$("#products").children("li").css("color","red"); // only the children will be impacted, not the grandchildren of products
+            $("#services").find("li").first().css("color","blue");//only the first li item of services will be impacted
+            $("li").last().prev().css("color","red");//impacts the li item which is before the last li item
+            $("li").last().hide(); //hides the last element of the li item
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <ul id="products">
+        <li>Laptop </li>
+        <li>Mobile </li>
+        <li>Headphones </li>
+        <ul>
+            <li> Sony </li>
+            <li> Apple </li>
+        </ul>
+    </ul>
+    <ul id="services">
+        <li> E-mail </li>
+        <li> Chat</li>
+        <li> SMS </li>
+    </ul>
+
+
+
+
+
+</body>
+
+</html>

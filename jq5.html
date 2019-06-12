@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script> 
+        $(function () {
+            $("button").click(function () {
+                var par = $("<p/>")
+                    .attr("id", "pt")
+                    .attr("data-price1")
+                    .attr("style", "color:red");// this just creates a para and text but does not display due to the lack of knowledge where to position it
+                
+                //$(".product").find("p").remove();
+                $(this).append(par);
+                $(this).after(par);// append appends the para element to the class product, also it appends after the last child of the product
+            })
+
+        })
+
+    </script>
+    <style>
+    li{
+        display: inline-block;
+        margin: 10px;
+        
+    }
+    </style>
+</head>
+
+<body>
+
+
+    <ul>
+        <li data-price1="4500" class="product" style="list-style:none">
+            <h2> Nokia 6600</h2>
+            <button id="b1">GET PRICE</button>
+        </li>
+
+        <li data-price="20000" class="product" style="list-style:none">
+            <h2> SAMSUNG S10</h2>
+            <button id="b2">GET PRICE</button>
+        </li>
+
+        <li data-price="40000" class="product" style="list-style:none">
+            <h2> iPhone XS</h2>
+            <button id="b3">GET PRICE</button>
+        </li>
+    </ul>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        // logically similar to main function in Java
+        // css seectors   
+        $(function () {
+            //to change the list to hello
+            //-->  $("li").text("hello");
+            //impacts the products 
+            //-->$("#products").css("color","red");
+            //impacts the children in the list
+            //-->$("#products > li").css("color", "red");  will only impact the first or immediate children of products 
+            //to impact the grandchildren or second ul list of products
+            //-->$("#products >>li").css("color","red"); or $("#products >ul").css("color","red");
+            //to impact two or more values in the list
+            //--> $("#products >li, #services >li:first").css("color","red"); using first will impact the only immediate(i.e,email) of the service list
+            //to have multiple properties for a list
+            //-->$("#products >>li").css({"color":"red", "border":"1px solid"});
+
+        })
+
+    </script>
+</head>
+
+<body>
+    <ul id="products">
+        <li>Laptop </li>
+        <li>Mobile </li>
+        <li>Headphones </li>
+        <ul>
+            <li> Sony </li>
+            <li> Apple </li>
+        </ul>
+    </ul>
+    <ul id="services">
+        <li> E-mail </li>
+        <li> Chat</li>
+        <li> SMS </li>
+    </ul>
+
+
+
+
+
+</body>
+
+</html>
